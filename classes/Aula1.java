@@ -1,20 +1,34 @@
-// package nome_diretório em que o arquivo se encontra
-package classes;
-
 // Classes devem ter a primeira letra maiúscula e as outras minúsculas
 public class Aula1 {
-    private int j = 0; // j é um atributo
 
     public static void main(String[] args) {
-        int i = 0; // i é uma variável
+        // Estou criando um onjeto do tipo Cachorro, chamado doguinho
+        // Estou instanciado através do operador new
+        // Após o new eu chamo o construtor da classe
+        Cachorro doguinho = new Cachorro("doguinho");
 
-        // doguinho é um OBJETO
-        // Cachorro() é um constructor
-        Cachorro doguinho = new Cachorro();
-    }
+        doguinho.setNome("Rex");
+        doguinho.setIdade(7);
+        doguinho.setRaca("Caramelo");
+        doguinho.setDono(true);
+        doguinho.setCastrado(false);
+        doguinho.setPeso(7.3);
 
-    private void soma(int a, int b) {
-        int i = 2; // i é valor do método soma
-        int soma = a + b + i + j;
+        // System.out.println(doguinho.getNome());
+        // System.out.println(doguinho.getIdade());
+        // System.out.println(doguinho.getRaca());
+        // System.out.println(doguinho.getDono());
+        // System.out.println(doguinho.getCastrado());
+        // System.out.println(doguinho.getPeso());
+
+        System.out.println(doguinho.toString());
+
+        // Cachorro toto = new Cachorro();
+        // toto.setNome("Thor");
+        // toto.setIdade(9);
+        // toto.setRaca("Pit Bull");
+        // toto.setDono(false);
+        // toto.setCastrado(true);
+        // toto.setPeso(11.8);
     }
 }

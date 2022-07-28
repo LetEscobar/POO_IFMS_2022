@@ -13,3 +13,34 @@
 
 -   Atributos devem ser encapsulados
     -   somente a classe que é dona do atributo, pode modificar diretamente o valor
+    -   os atributos não podem ser públicos
+
+CONSTRUTOR é responsável por criar um objeto e alocar ele na memória
+
+-   o construtor é a primeira coisa a ser executadas
+
+Model = modelo da aplicação, ou seja, classes que irão gerar objetos
+
+POLIMORFISMO: quando existe um método, que usamos e reescrevemos este método
+
+SOBRECARGA: acontece quando temos métodos com o mesmo nome e diferentes assinaturas
+
+ASSINATURA: public tipo_ref Nome_função Parâmetro
+
+-   Posso criar um construtor com os dados que eu quero
+-   Se eu não criar um construtor ele fica implícito na classe
+
+DIAGRAMA DE CLASSE
+
+<!--
+_____________________
+|    Nome_classe    |
+|___________________|
+|                   |
+|   - Atributos     |
+|___________________|
+|                   |
+|    - Métodos      |
+|___________________|
+
+-->

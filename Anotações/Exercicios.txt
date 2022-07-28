@@ -1,0 +1,9 @@
+Criar os Modelos:
+    - Conta Corrente
+    - Conta Poupança
+Regras: 
+    - ter ao menos 3 atributos em cada Modelo
+    - ter ao menos 2 métodos (saque e depósito)
+
+Obs.: Criar um diagrama inicialmente para facilitar
+

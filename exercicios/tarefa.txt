@@ -1,0 +1,1 @@
+Exibir quantas notas de 5, 10 e/ou 50 foram retiradas

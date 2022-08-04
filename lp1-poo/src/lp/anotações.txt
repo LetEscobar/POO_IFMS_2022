@@ -1,0 +1,18 @@
+Recursividade: função que chama uma instância do mesmo tipo
+
+Declaração de vetores em Java:
+int vetor[] = new int[5];
+int vetor2[] = new int[3];
+
+Atribuição de valores aos vetores:
+int vetor1[] = { 1, 2, 3, 4, 5 };
+vetor2[2] = 5;
+
+Declaração de matrizes:
+int matriz[][] = new int[3][3
+Criando uma constante:
+final double pi = 3.141
+
+Laços:
+while(true){} loop infinito
+for(;;){} for infinito

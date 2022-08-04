@@ -1,3 +1,5 @@
+package poo;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Ponto p1 = new Ponto(2, 7);

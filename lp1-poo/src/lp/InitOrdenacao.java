@@ -59,5 +59,33 @@ public class InitOrdenacao {
         }
 
         // ------------------------------------------------------------
+
+        int vetor10[] = new int[10];
+        int min2 = 10;
+        int max2 = 20;
+        int qtd = 0;
+
+        System.out.println("\nVETOR10: ");
+        for (int i = 0; i < 10; i++) {
+            boolean found = true;
+            int temp = 0;
+            while (found) {
+                found = false;
+                temp = rand.nextInt(max2 - min2) + min2;
+                for (int j = 0; j < qtd; j++) {
+                    if (temp == vetor10[j]) {
+                        found = true;
+                    }
+                }
+            }
+            vetor10[i] = temp;
+            System.out.println("vetor10[" + i + "] = " + vetor10[i]);
+            qtd++;
+        }
+        // System.out.println("\nVETOR10: ");
+        // for (int i = 0; i < 10; i++) {
+        // System.out.println("vetor10[" + i + "] = " + vetor10[i]);
+        // }
+
     }
 }

@@ -44,3 +44,32 @@ _____________________
 |___________________|
 
 -->
+
+Classes abstratas não podem ser instanciadas
+Criar superclasses sempre como abstratas
+
+Colocar protected na superclasse
+Manter private nas subclasses
+
+Métodos abstratos em superclasses, DEVEM ser implementados (deve ter corpo)
+Métodos não abstratos, podem ou não ser implementados
+
+---
+
+Próximos passos:
+
+-   Interfaces
+-   Colletions
+
+PROVA ATÉ AQUI
+
+-   Métodos de organização
+    -   Merge sort
+    -   Quik sort
+-   Exceptions
+-   BD
+    Listas, pilhas e filas
+
+Livros de Estrutura de dados e Orientação a Objetos
+
+Ex: 2 a 3 atributos em cada classe

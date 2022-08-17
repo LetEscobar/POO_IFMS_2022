@@ -1,3 +1,4 @@
+package poo.heranca_exercicio;
 import java.time.LocalDate;
 
 public class Estudante extends Pessoa {

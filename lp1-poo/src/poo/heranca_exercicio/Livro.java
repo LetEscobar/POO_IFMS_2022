@@ -1,3 +1,6 @@
+package poo.heranca_exercicio;
+
+
 import java.time.LocalDate;
 
 public class Livro {
@@ -5,7 +8,7 @@ public class Livro {
     private String editora;
     private LocalDate dataLancamento;
 
-    // construtor para obrigar a criação de título do livro
+    // construtor para obrigar a criaï¿½ï¿½o de tï¿½tulo do livro
     public Livro(String titulo) {
         this.titulo = titulo;
     }
@@ -32,6 +35,11 @@ public class Livro {
 
     public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
+    }
+
+    @Override
+    public String toString() {
+        return "TÃ­tulo:" + this.titulo;
     }
 
 }

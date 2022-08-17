@@ -1,3 +1,4 @@
+package poo.heranca_exercicio;
 import java.time.LocalDate;
 
 public abstract class Pessoa {
@@ -5,12 +6,12 @@ public abstract class Pessoa {
     protected LocalDate dataNascimento;
     protected String endereco;
 
-    // construtor default: só existe para poder gerar instância em estudante e
-    // funcionário
+    // construtor default: sï¿½ existe para poder gerar instï¿½ncia em estudante e
+    // funcionï¿½rio
     protected Pessoa() {
     }
 
-    // construtor obrigatório para gerar instância de Autor
+    // construtor obrigatï¿½rio para gerar instï¿½ncia de Autor
     protected Pessoa(String _nome, LocalDate _dataNascimento, String _endereco) {
         this.nome = _nome;
         this.endereco = _endereco;

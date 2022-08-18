@@ -1,12 +1,14 @@
 package poo.heranca_exercicio;
+
 import java.time.LocalDate;
 import java.time.Month;
 
 public class testeExHeranca {
     public static void main(String[] args) {
         // Objeto autor
-        LocalDate dataNascimento = LocalDate.of(2001, Month.JANUARY, 22);
-        Autor leticia = new Autor("Letícia", dataNascimento, "Três Lagoas", "TADS", 2);
+        // LocalDate dataNascimento = LocalDate.of(2001, Month.JANUARY, 22);
+        // Autor leticia = new Autor("Letícia", dataNascimento, "Três Lagoas", "TADS",
+        // 2);
 
         // Objeto livro POO
         LocalDate dataLancamentoPOO = LocalDate.of(2022, Month.AUGUST, 15);

@@ -1,7 +1,7 @@
 package lp;
 
 import java.util.Random;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class InitOrdenacao {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class InitOrdenacao {
         // Fazendo a leitura de dados pelo teclado:
         // Classe nome_objeto = operador_gera_instância
         // Construtor_da_classe(parâmetros_para_criar_objetos)
-        Scanner in = new Scanner(System.in);
+        // Scanner in = new Scanner(System.in);
 
         // for (int i = 0; i < 5; i++) {
         // System.out.println(vetor[i]);
@@ -27,7 +27,7 @@ public class InitOrdenacao {
 
         // ------------------------------------------------------------
         // (int) -> casting de dados
-        int num = (int) (Math.random());
+        // int num = (int) (Math.random());
         // Math.random() gera núeros de 0 a 1
 
         // Random

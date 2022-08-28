@@ -1,17 +1,20 @@
 package poo.heranca_exercicio;
+
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public abstract class Pessoa {
     protected String nome;
     protected LocalDate dataNascimento;
     protected String endereco;
 
-    // construtor default: s� existe para poder gerar inst�ncia em estudante e
-    // funcion�rio
+    // construtor default: só existe para poder gerar instância em estudante e
+    // funcionário
     protected Pessoa() {
     }
 
-    // construtor obrigat�rio para gerar inst�ncia de Autor
+    // construtor obrigatório para gerar instância de Autor
     protected Pessoa(String _nome, LocalDate _dataNascimento, String _endereco) {
         this.nome = _nome;
         this.endereco = _endereco;
@@ -42,4 +45,9 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
 
+    public String toString() {
+        return ("Nome: " + this.nome +
+                "\nData de nascimento: " + this.dataNascimento +
+                "\nEndereço: " + this.endereco);
+    }
 }

@@ -1,6 +1,7 @@
 package poo.heranca_exercicio;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Livro {
@@ -8,7 +9,6 @@ public class Livro {
     private String editora;
     private LocalDate dataLancamento;
 
-    // construtor para obrigar a cria��o de t�tulo do livro
     public Livro(String titulo) {
         this.titulo = titulo;
     }
@@ -29,49 +29,42 @@ public class Livro {
         this.editora = editora;
     }
 
-    public LocalDate getDataLancamento() {
+    public LocalDate getdataLancamento() {
         return this.dataLancamento;
     }
 
-    public void setDataLancamento(LocalDate dataLancamento) {
+    public void setdataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
-    @Override
     public String toString() {
-        return "Título:" + this.titulo;
+        return ("Título: " + this.titulo +
+                "\nEditora: " + this.editora +
+                "\nData de lançamento: " + this.dataLancamento);
     }
 
     public static Livro cadastrarLivro() {
         Scanner in = new Scanner(System.in);
+
+        // Título do livro:
         System.out.print("Digite o título do livro: ");
         String titulo = in.next();
         if (titulo.length() < 2) {
-            System.out.println("O título do livro deve ter ao menos 2 caracteres!");
-
-            return (null);
+            System.out.println("O título deve ter ao menos 2 caracteres!");
+            return null;
         }
         Livro novoLivro = new Livro(titulo);
+
+        // Editora do livro:
         System.out.print("Digite a editora do livro: ");
         novoLivro.setEditora(in.next());
 
-        System.out.println("Digite a data de lancamento (dd/mm/yyyy): ");
+        // Data de lancamento do livro:
+        System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");
         String data = in.next();
-        String dtLanc[] = data.split("/");
-
-        if (dtLanc.length != 3) {
-            System.out.println("Digite a data corretamente!");
-
-            return null;
-        }
-
-        int dd = Integer.parseInt(dtLanc[0]);
-        int m = Integer.parseInt(dtLanc[1]);
-        int y = Integer.parseInt(dtLanc[2]);
-
-        LocalDate d = LocalDate.of(y, m, dd);
-
-        novoLivro.setDataLancamento(d);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaData = LocalDate.parse(data, formatter);
+        novoLivro.setdataLancamento(novaData);
 
         return novoLivro;
     }

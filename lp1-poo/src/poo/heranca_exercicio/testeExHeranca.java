@@ -11,16 +11,16 @@ public class testeExHeranca {
         // 2);
 
         // Objeto livro POO
-        LocalDate dataLancamentoPOO = LocalDate.of(2022, Month.AUGUST, 15);
+        // LocalDate dataLancamentoPOO = LocalDate.of(2022, Month.AUGUST, 15);
         Livro LivroPOO = new Livro("Programando em POO");
         LivroPOO.setEditora("Editora Erica");
-        LivroPOO.setDataLancamento(dataLancamentoPOO);
+        // LivroPOO.setDataLancamento(dataLancamentoPOO);
 
         // Objeto livro JS
-        LocalDate dataLancamentoJS = LocalDate.of(2021, Month.DECEMBER, 23);
+        // LocalDate dataLancamentoJS = LocalDate.of(2021, Month.DECEMBER, 23);
         Livro LivroJS = new Livro("Programando em JS");
         LivroJS.setEditora("Editora Westminster");
-        LivroJS.setDataLancamento(dataLancamentoJS);
+        // LivroJS.setDataLancamento(dataLancamentoJS);
 
         // Objeto funcionário
         LocalDate dataNascimentoFunc = LocalDate.of(2001, Month.JANUARY, 22);

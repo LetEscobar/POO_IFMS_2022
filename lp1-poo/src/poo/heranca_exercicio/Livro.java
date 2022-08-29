@@ -47,8 +47,8 @@ public class Livro {
         Scanner in = new Scanner(System.in);
 
         // Título do livro:
-        System.out.print("Digite o título do livro: ");
-        String titulo = in.next();
+        System.out.print("Digite o título: ");
+        String titulo = in.nextLine();
         if (titulo.length() < 2) {
             System.out.println("O título deve ter ao menos 2 caracteres!");
             return null;
@@ -56,8 +56,8 @@ public class Livro {
         Livro novoLivro = new Livro(titulo);
 
         // Editora do livro:
-        System.out.print("Digite a editora do livro: ");
-        novoLivro.setEditora(in.next());
+        System.out.print("Digite a editora: ");
+        novoLivro.setEditora(in.nextLine());
 
         // Data de lancamento do livro:
         System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");

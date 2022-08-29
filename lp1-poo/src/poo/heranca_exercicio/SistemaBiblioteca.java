@@ -23,6 +23,7 @@ public class SistemaBiblioteca {
 
     private static List<Livro> livros = new ArrayList<Livro>();
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
+    private static List<Estudante> estudantes = new ArrayList<Estudante>();
     // private static List<Autor> autores = new ArrayList<Autor>();
 
     private static Scanner buffer = new Scanner(System.in);
@@ -53,23 +54,44 @@ public class SistemaBiblioteca {
         switch (op) {
             // 1 - Cadastrar Livro
             case 1:
+                System.out.println("---------- Cadastrar Livro ----------");
                 Livro novoLivro = Livro.cadastrarLivro();
-                System.out.println("\nLivro cadastrado com sucesso!\n\nDados do livro:");
+                System.out.println("\nLivro cadastrado com sucesso!\n\nDados do Livro:");
                 System.out.println(novoLivro.toString());
                 livros.add(novoLivro);
                 break;
             // 2 - Cadastrar Funcionario
             case 2:
+                System.out.println("---------- Cadastrar Funcionário: ----------");
                 Funcionario novoFuncionario = Funcionario.cadastrarFuncionario();
-
-                // 3 - Cadastrar Estudante
-                // 4 - Cadastrar Autor
-                // 5 - Realizar Emprestimo
-                // 6 - Receber Emprestimo
-                // 0 - Sair
-
+                System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do Funcionário:");
+                System.out.println(novoFuncionario.toString());
+                funcionarios.add(novoFuncionario);
+                break;
+            // 3 - Cadastrar Estudante
+            case 3:
+                System.out.println("---------- Cadastrar Estudante: ----------");
+                Estudante novoEstudante = Estudante.cadastrarEstudante();
+                System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do Estudante:");
+                System.out.println(novoEstudante.toString());
+                estudantes.add(novoEstudante);
+                break;
+            // 4 - Cadastrar Autor
+            case 4:
+                System.out.println("---------- Cadastrar Autor: ----------");
+                break;
+            // 5 - Realizar Emprestimo
+            case 5:
+                System.out.println("---------- Realizar Empréstimo: ----------");
+                break;
+            // 6 - Receber Emprestimo
+            case 6:
+                System.out.println("---------- Receber Empréstimo: ----------");
+                break;
+            // 0 - Sair
             default:
-                System.out.println("Saindo da func escolha");
+                System.out.println("---------- Programa encerrado! ----------");
+                break;
         }
     }
 }

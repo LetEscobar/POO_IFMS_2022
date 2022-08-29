@@ -45,9 +45,35 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
 
+    // Outros métodos
+
     public String toString() {
         return ("Nome: " + this.nome +
                 "\nData de nascimento: " + this.dataNascimento +
                 "\nEndereço: " + this.endereco);
+    }
+
+    public Pessoa cadastrarPessoa() {
+
+        Scanner in = new Scanner(System.in);
+
+        // Nome:
+        System.out.print("Digite o nome: ");
+        String nome = in.nextLine();
+        this.nome = nome;
+
+        // Endereço:
+        System.out.print("Digite o endereço: ");
+        String endereco = in.nextLine();
+        this.endereco = endereco;
+
+        // Data de nascimento:
+        System.out.print("Digite a data de nascimento (dd/mm/yyyy): ");
+        String dataNascimento = in.next();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaDataNascimento = LocalDate.parse(dataNascimento, formatter);
+        this.dataNascimento = novaDataNascimento;
+
+        return null;
     }
 }

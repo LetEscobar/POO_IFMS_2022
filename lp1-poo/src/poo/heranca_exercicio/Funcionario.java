@@ -5,15 +5,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Funcionario extends Pessoa {
-    private String matricula;
+    private int matricula;
     private LocalDate dataAdmissao;
     private String cargo;
 
-    public String getMatricula() {
+    // -------------------------- Getters e Setters --------------------------
+    public int getMatricula() {
         return this.matricula;
     }
 
-    public void setMatricula(String matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 
@@ -33,47 +34,42 @@ public class Funcionario extends Pessoa {
         this.cargo = cargo;
     }
 
+    // -------------------------- Outros métodos --------------------------
+
+    // Exibir dados:
     public String toString() {
         return (super.toString() +
-                "Matrícula: " + this.matricula +
+                "\nMatrícula: " + this.matricula +
                 "\nData de admissão: " + this.dataAdmissao +
                 "\nCargo: " + this.cargo);
     }
 
+    // Cadastrar funcionário:
     public static Funcionario cadastrarFuncionario() {
-        Scanner in = new Scanner(System.in);
 
         Funcionario novoFuncionario = new Funcionario();
 
-        // Nome do funcionário:
-        System.out.print("Digite o nome do funcionário: ");
-        String nome = in.next();
+        // Nome, endereço e data de nascimento:
+        novoFuncionario.cadastrarPessoa();
 
-        // Data de nascimento do funcionário:
-        System.out.print("Digite a data de nascimento (dd/mm/yyyy): ");
-        String dataNascimento = in.next();
-        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate novaDataNascimento = LocalDate.parse(dataNascimento, formatter1);
-        novoFuncionario.setDataNascimento(novaDataNascimento);
+        Scanner in = new Scanner(System.in);
 
-        // Endereço do funcionário:
-        System.out.print("Digite o endereço: ");
-        String endereco = in.next();
+        // Cargo do funcionário:
+        System.out.print("Digite o cargo que o funcionário ocupa: ");
+        String cargo = in.nextLine();
+        novoFuncionario.setCargo(cargo);
 
         // Matricula do funcionário:
         System.out.print("Digite a matrícula: ");
-        String matricula = in.next();
+        int matricula = in.nextInt();
+        novoFuncionario.setMatricula(matricula);
 
         // Data de admissão do funcionário:
         System.out.print("Digite a data de admissão (dd/mm/yyyy): ");
         String dataAdmissao = in.next();
-        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate novaDataAdmissao = LocalDate.parse(dataAdmissao, formatter2);
-        novoFuncionario.setDataAdmissao(novaDataNascimento);
-
-        // Cargo do funcionário:
-        System.out.print("Digite o cargo que o funcionário ocupa: ");
-        String cargo = in.next();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaDataAdmissao = LocalDate.parse(dataAdmissao, formatter);
+        novoFuncionario.setDataAdmissao(novaDataAdmissao);
 
         return novoFuncionario;
     }

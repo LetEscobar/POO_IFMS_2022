@@ -40,7 +40,7 @@ public class Autor extends Pessoa {
     }
 
     // Cadastrar estudante:
-    public static Autor cadastrarAutor() {
+    public Autor cadastrarAutor() {
 
         Autor novoAutor = new Autor(nome, dataNascimento, endereco, formacao, quantidade);
 

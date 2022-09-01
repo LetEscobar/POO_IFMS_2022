@@ -61,34 +61,36 @@ public class SistemaBiblioteca {
                 livros.add(novoLivro);
                 break;
             // 2 - Cadastrar Funcionario
-            case 2:
-                System.out.println("---------- Cadastrar Funcionário: ----------");
-                Funcionario novoFuncionario = Funcionario.cadastrarFuncionario();
-                System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do Funcionário:");
-                System.out.println(novoFuncionario.toString());
-                funcionarios.add(novoFuncionario);
-                break;
-            // 3 - Cadastrar Estudante
-            case 3:
-                System.out.println("---------- Cadastrar Estudante: ----------");
-                Estudante novoEstudante = Estudante.cadastrarEstudante();
-                System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do Estudante:");
-                System.out.println(novoEstudante.toString());
-                estudantes.add(novoEstudante);
-                break;
-            // 4 - Cadastrar Autor
-            case 4:
-                System.out.println("---------- Cadastrar Autor: ----------");
-                break;
-            // 5 - Realizar Emprestimo
-            case 5:
-                System.out.println("---------- Realizar Empréstimo: ----------");
-                break;
-            // 6 - Receber Emprestimo
-            case 6:
-                System.out.println("---------- Receber Empréstimo: ----------");
-                break;
-            // 0 - Sair
+            // case 2:
+            // System.out.println("---------- Cadastrar Funcionário: ----------");
+            // Funcionario novoFuncionario = novoFuncionario.cadastrarFuncionario();
+            // System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do
+            // Funcionário:");
+            // System.out.println(novoFuncionario.toString());
+            // funcionarios.add(novoFuncionario);
+            // break;
+            // // 3 - Cadastrar Estudante
+            // case 3:
+            // System.out.println("---------- Cadastrar Estudante: ----------");
+            // Estudante novoEstudante = Estudante.cadastrarEstudante();
+            // System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do
+            // Estudante:");
+            // System.out.println(novoEstudante.toString());
+            // estudantes.add(novoEstudante);
+            // break;
+            // // 4 - Cadastrar Autor
+            // case 4:
+            // System.out.println("---------- Cadastrar Autor: ----------");
+            // break;
+            // // 5 - Realizar Emprestimo
+            // case 5:
+            // System.out.println("---------- Realizar Empréstimo: ----------");
+            // break;
+            // // 6 - Receber Emprestimo
+            // case 6:
+            // System.out.println("---------- Receber Empréstimo: ----------");
+            // break;
+            // // 0 - Sair
             default:
                 System.out.println("---------- Programa encerrado! ----------");
                 break;

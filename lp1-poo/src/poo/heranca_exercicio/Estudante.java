@@ -44,7 +44,7 @@ public class Estudante extends Pessoa {
     }
 
     // Cadastrar estudante:
-    public static Estudante cadastrarEstudante() {
+    public Estudante cadastrarEstudante() {
         Estudante novoEstudante = new Estudante();
 
         // Nome, endereço e data de nascimento:

@@ -45,12 +45,13 @@ public class Funcionario extends Pessoa {
     }
 
     // Cadastrar funcionário:
-    public static Funcionario cadastrarFuncionario() {
+    public Funcionario cadastrarFuncionario() {
 
         Funcionario novoFuncionario = new Funcionario();
 
         // Nome, endereço e data de nascimento:
         novoFuncionario.cadastrarPessoa();
+        // Usar get e set
 
         Scanner in = new Scanner(System.in);
 

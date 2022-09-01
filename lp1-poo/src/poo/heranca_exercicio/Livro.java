@@ -43,7 +43,7 @@ public class Livro {
                 "\nData de lançamento: " + this.dataLancamento);
     }
 
-    public static Livro cadastrarLivro() {
+    public Livro cadastrarLivro() {
         Scanner in = new Scanner(System.in);
 
         // Título do livro:
@@ -56,7 +56,7 @@ public class Livro {
         Livro novoLivro = new Livro(titulo);
 
         // Editora do livro:
-        System.out.print("Digite a editora: ");
+        System.out.print("Digite a editorax: ");
         novoLivro.setEditora(in.nextLine());
 
         // Data de lancamento do livro:

@@ -9,7 +9,36 @@ public class Funcionario extends Pessoa {
     private LocalDate dataAdmissao;
     private String cargo;
 
-    // -------------------------- Getters e Setters --------------------------
+    // ---------------------------- Métodos ----------------------------
+
+    // Exibir dados:
+    public String toString() {
+        return (super.toString() +
+                "\nMatrícula: " + this.matricula +
+                "\nData de admissão: " + this.dataAdmissao +
+                "\nCargo: " + this.cargo);
+    }
+
+    // Construtor:
+    public Funcionario() {
+        super();
+
+        Scanner inString = new Scanner(System.in);
+        Scanner inInt = new Scanner(System.in);
+
+        System.out.print("Digite o número da matrícula: ");
+        this.matricula = inInt.nextInt();
+
+        System.out.print("Digite o cargo: ");
+        this.cargo = inString.nextLine();
+
+        System.out.print("Digite a data de admissão (dd/mm/yyyy): ");
+        String data = inString.nextLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.dataAdmissao = LocalDate.parse(data, formatter);
+    }
+
+    // ------------------ Métodos Getters and Setters ------------------
     public int getMatricula() {
         return this.matricula;
     }
@@ -32,46 +61,5 @@ public class Funcionario extends Pessoa {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
-    }
-
-    // -------------------------- Outros métodos --------------------------
-
-    // Exibir dados:
-    public String toString() {
-        return (super.toString() +
-                "\nMatrícula: " + this.matricula +
-                "\nData de admissão: " + this.dataAdmissao +
-                "\nCargo: " + this.cargo);
-    }
-
-    // Cadastrar funcionário:
-    public Funcionario cadastrarFuncionario() {
-
-        Funcionario novoFuncionario = new Funcionario();
-
-        // Nome, endereço e data de nascimento:
-        novoFuncionario.cadastrarPessoa();
-        // Usar get e set
-
-        Scanner in = new Scanner(System.in);
-
-        // Cargo do funcionário:
-        System.out.print("Digite o cargo que o funcionário ocupa: ");
-        String cargo = in.nextLine();
-        novoFuncionario.setCargo(cargo);
-
-        // Matricula do funcionário:
-        System.out.print("Digite a matrícula: ");
-        int matricula = in.nextInt();
-        novoFuncionario.setMatricula(matricula);
-
-        // Data de admissão do funcionário:
-        System.out.print("Digite a data de admissão (dd/mm/yyyy): ");
-        String dataAdmissao = in.next();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate novaDataAdmissao = LocalDate.parse(dataAdmissao, formatter);
-        novoFuncionario.setDataAdmissao(novaDataAdmissao);
-
-        return novoFuncionario;
     }
 }

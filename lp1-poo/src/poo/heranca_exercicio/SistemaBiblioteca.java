@@ -28,21 +28,20 @@ public class SistemaBiblioteca {
 
     private static Scanner buffer = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int op = 1;
         while (op != 0) {
             printMenu();
             op = buffer.nextInt();
             escolha(op);
-            System.in.read(); // System("pause")
         }
     }
 
     // ----------------------------------------------------------------
     private static void printMenu() {
         // Limpando a tela:
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+        // System.out.print("\033[H\033[2J");
+        // System.out.flush();
         // Printando as opções do menu:
         for (String op : opcoes) {
             System.out.println(op);
@@ -55,42 +54,42 @@ public class SistemaBiblioteca {
             // 1 - Cadastrar Livro
             case 1:
                 System.out.println("---------- Cadastrar Livro ----------");
-                Livro novoLivro = Livro.cadastrarLivro();
+                Livro novoLivro = new Livro();
                 System.out.println("\nLivro cadastrado com sucesso!\n\nDados do Livro:");
                 System.out.println(novoLivro.toString());
                 livros.add(novoLivro);
                 break;
             // 2 - Cadastrar Funcionario
-            // case 2:
-            // System.out.println("---------- Cadastrar Funcionário: ----------");
-            // Funcionario novoFuncionario = novoFuncionario.cadastrarFuncionario();
-            // System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do
-            // Funcionário:");
-            // System.out.println(novoFuncionario.toString());
-            // funcionarios.add(novoFuncionario);
-            // break;
+            case 2:
+                System.out.println("---------- Cadastrar Funcionário: ----------");
+                Funcionario novoFuncionario = new Funcionario();
+                System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do Funcionário:");
+                System.out.println(novoFuncionario.toString());
+                funcionarios.add(novoFuncionario);
+                break;
             // // 3 - Cadastrar Estudante
-            // case 3:
-            // System.out.println("---------- Cadastrar Estudante: ----------");
-            // Estudante novoEstudante = Estudante.cadastrarEstudante();
-            // System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do
-            // Estudante:");
-            // System.out.println(novoEstudante.toString());
-            // estudantes.add(novoEstudante);
-            // break;
+            case 3:
+                System.out.println("---------- Cadastrar Estudante: ----------");
+                // Estudante novoEstudante = Estudante.cadastrarEstudante();
+                // System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do
+                // Estudante:");
+                // System.out.println(novoEstudante.toString());
+                // estudantes.add(novoEstudante);
+                break;
             // // 4 - Cadastrar Autor
-            // case 4:
-            // System.out.println("---------- Cadastrar Autor: ----------");
-            // break;
-            // // 5 - Realizar Emprestimo
-            // case 5:
-            // System.out.println("---------- Realizar Empréstimo: ----------");
-            // break;
-            // // 6 - Receber Emprestimo
-            // case 6:
-            // System.out.println("---------- Receber Empréstimo: ----------");
-            // break;
-            // // 0 - Sair
+            case 4:
+                System.out.println("---------- Cadastrar Autor: ----------");
+                // Autor novoAutor = Autor.cadastrarAutor();
+                break;
+            // 5 - Realizar Emprestimo
+            case 5:
+                System.out.println("---------- Realizar Empréstimo: ----------");
+                break;
+            // 6 - Receber Emprestimo
+            case 6:
+                System.out.println("---------- Receber Empréstimo: ----------");
+                break;
+            // 0 - Sair
             default:
                 System.out.println("---------- Programa encerrado! ----------");
                 break;

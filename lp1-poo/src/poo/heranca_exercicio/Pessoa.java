@@ -9,18 +9,6 @@ public abstract class Pessoa {
     protected LocalDate dataNascimento;
     protected String endereco;
 
-    // construtor default: só existe para poder gerar instância em estudante e
-    // funcionário
-    protected Pessoa() {
-    }
-
-    // construtor obrigatório para gerar instância de Autor
-    protected Pessoa(String _nome, LocalDate _dataNascimento, String _endereco) {
-        this.nome = _nome;
-        this.endereco = _endereco;
-        this.dataNascimento = _dataNascimento;
-    }
-
     public String getNome() {
         return this.nome;
     }
@@ -53,8 +41,7 @@ public abstract class Pessoa {
                 "\nEndereço: " + this.endereco);
     }
 
-    public Pessoa cadastrarPessoa() {
-
+    public Pessoa() {
         Scanner in = new Scanner(System.in);
 
         // Nome:
@@ -73,7 +60,5 @@ public abstract class Pessoa {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaDataNascimento = LocalDate.parse(dataNascimento, formatter);
         this.dataNascimento = novaDataNascimento;
-
-        return null;
     }
 }

@@ -9,10 +9,7 @@ public class Livro {
     private String editora;
     private LocalDate dataLancamento;
 
-    public Livro(String titulo) {
-        this.titulo = titulo;
-    }
-
+    // ----------------- Getters and Setters ------------------
     public String getTitulo() {
         return this.titulo;
     }
@@ -29,43 +26,36 @@ public class Livro {
         this.editora = editora;
     }
 
-    public LocalDate getdataLancamento() {
+    public LocalDate getDataLancamento() {
         return this.dataLancamento;
     }
 
-    public void setdataLancamento(LocalDate dataLancamento) {
+    public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
+    // -------------------- Outros métodos --------------------
     public String toString() {
         return ("Título: " + this.titulo +
                 "\nEditora: " + this.editora +
                 "\nData de lançamento: " + this.dataLancamento);
     }
 
-    public Livro cadastrarLivro() {
+    // construtor
+    public Livro() {
         Scanner in = new Scanner(System.in);
-
         // Título do livro:
         System.out.print("Digite o título: ");
-        String titulo = in.nextLine();
-        if (titulo.length() < 2) {
-            System.out.println("O título deve ter ao menos 2 caracteres!");
-            return null;
-        }
-        Livro novoLivro = new Livro(titulo);
-
+        this.titulo = in.nextLine();
         // Editora do livro:
-        System.out.print("Digite a editorax: ");
-        novoLivro.setEditora(in.nextLine());
+        System.out.print("Digite a editora: ");
+        this.editora = in.nextLine();
 
         // Data de lancamento do livro:
         System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");
-        String data = in.next();
+        String data = in.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaData = LocalDate.parse(data, formatter);
-        novoLivro.setdataLancamento(novaData);
-
-        return novoLivro;
+        this.dataLancamento = novaData;
     }
 }

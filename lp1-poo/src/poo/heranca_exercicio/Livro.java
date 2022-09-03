@@ -9,7 +9,31 @@ public class Livro {
     private String editora;
     private LocalDate dataLancamento;
 
-    // ----------------- Getters and Setters ------------------
+    // -------------------------- Métodos --------------------------
+    public String toString() {
+        return ("Título: " + this.titulo +
+                "\nEditora: " + this.editora +
+                "\nData de lançamento: " + this.dataLancamento);
+    }
+
+    // Construtor:
+    public Livro() {
+        Scanner inString = new Scanner(System.in);
+
+        System.out.print("Digite o título: ");
+        this.titulo = inString.nextLine();
+
+        System.out.print("Digite a editora: ");
+        this.editora = inString.nextLine();
+
+        System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");
+        String data = inString.nextLine();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaData = LocalDate.parse(data, formatter);
+        this.dataLancamento = novaData;
+    }
+
+    // ---------------- Métodos Getters and Setters -----------------
     public String getTitulo() {
         return this.titulo;
     }
@@ -32,30 +56,5 @@ public class Livro {
 
     public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
-    }
-
-    // -------------------- Outros métodos --------------------
-    public String toString() {
-        return ("Título: " + this.titulo +
-                "\nEditora: " + this.editora +
-                "\nData de lançamento: " + this.dataLancamento);
-    }
-
-    // construtor
-    public Livro() {
-        Scanner in = new Scanner(System.in);
-        // Título do livro:
-        System.out.print("Digite o título: ");
-        this.titulo = in.nextLine();
-        // Editora do livro:
-        System.out.print("Digite a editora: ");
-        this.editora = in.nextLine();
-
-        // Data de lancamento do livro:
-        System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");
-        String data = in.nextLine();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate novaData = LocalDate.parse(data, formatter);
-        this.dataLancamento = novaData;
     }
 }

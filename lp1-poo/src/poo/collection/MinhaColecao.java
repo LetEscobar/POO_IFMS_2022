@@ -2,11 +2,13 @@ package poo.collection;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import poo.heranca_exercicio.Livro;
 
 public class MinhaColecao {
+
     public static void main(String[] args) {
-        // Declaração da collection:
+        // dessa forma eu declaro uma collection
         List<Livro> livros = new ArrayList<Livro>();
 
         Livro l1 = new Livro("Minha coleção parte I");
@@ -19,14 +21,17 @@ public class MinhaColecao {
         livros.add(l3);
         livros.add(l4);
 
+        // 1 opcao p imprimir a lista
         for (int i = 0; i < livros.size(); i++) {
             System.out.println(livros.get(i));
         }
 
+        // opcao mais avancada p imprimir a lista
         for (Livro l : livros) {
             System.out.println(l);
         }
 
         livros.remove(0);
+
     }
 }

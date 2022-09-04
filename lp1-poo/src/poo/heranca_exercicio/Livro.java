@@ -33,6 +33,10 @@ public class Livro {
         this.dataLancamento = novaData;
     }
 
+    // Construtor para o exercício de collection:
+    public Livro(String string) {
+    }
+
     // ---------------- Métodos Getters and Setters -----------------
     public String getTitulo() {
         return this.titulo;

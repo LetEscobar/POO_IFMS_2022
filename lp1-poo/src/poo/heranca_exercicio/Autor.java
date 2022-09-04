@@ -7,7 +7,7 @@ public class Autor extends Pessoa {
     private String formacao;
     private int quantidadeLivros;
 
-    // -------------------------- Outros métodos --------------------------
+    // ---------------------------- Métodos ----------------------------
 
     // Exibir dados:
     public String toString() {
@@ -16,20 +16,21 @@ public class Autor extends Pessoa {
                 "\nQuantidade de livros publicados: " + this.quantidadeLivros);
     }
 
-    // Cadastrar estudante:
+    // Construtor
     public Autor() {
         super();
+
         Scanner inString = new Scanner(System.in);
         Scanner inInt = new Scanner(System.in);
 
-        System.out.print("Digite formacao: ");
+        System.out.print("Digite a formação do autor: ");
         this.formacao = inString.nextLine();
 
-        System.out.print("Digite a editora: ");
+        System.out.print("Digite a quantidade de livros escritos pelo autor: ");
         this.quantidadeLivros = inInt.nextInt();
     }
 
-    // ----------------------- Getters and Setters ------------------------
+    // ------------------ Métodos Getters and Setters ------------------
     public String getFormacao() {
         return this.formacao;
     }

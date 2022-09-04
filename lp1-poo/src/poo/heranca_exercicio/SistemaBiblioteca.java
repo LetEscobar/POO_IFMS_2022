@@ -22,8 +22,8 @@ public class SistemaBiblioteca {
 
     private static List<Livro> livros = new ArrayList<Livro>();
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
-    // private static List<Estudante> estudantes = new ArrayList<Estudante>();
-    // private static List<Autor> autores = new ArrayList<Autor>();
+    private static List<Estudante> estudantes = new ArrayList<Estudante>();
+    private static List<Autor> autores = new ArrayList<Autor>();
 
     private static Scanner buffer = new Scanner(System.in);
 
@@ -62,23 +62,25 @@ public class SistemaBiblioteca {
             case 2:
                 System.out.println("---------- Cadastrar Funcionário: ----------");
                 Funcionario novoFuncionario = new Funcionario();
-                System.out.println("\nFuncionário cadastrado com sucesso!\n\nDados do Funcionário:");
+                System.out.println("\nFuncionário cadastrado com sucesso!\nDados do Funcionário:");
                 System.out.println(novoFuncionario.toString());
                 funcionarios.add(novoFuncionario);
                 break;
 
             case 3:
                 System.out.println("---------- Cadastrar Estudante: ----------");
-                // Estudante novoEstudante = Estudante.cadastrarEstudante();
-                // System.out.println("\nEstudante cadastrado com sucesso!\n\nDados do
-                // Estudante:");
-                // System.out.println(novoEstudante.toString());
-                // estudantes.add(novoEstudante);
+                Estudante novoEstudante = new Estudante();
+                System.out.println("\nEstudante cadastrado com sucesso!\nDados do Estudante:");
+                System.out.println(novoEstudante.toString());
+                estudantes.add(novoEstudante);
                 break;
 
             case 4:
                 System.out.println("---------- Cadastrar Autor: ----------");
-                // Autor novoAutor = Autor.cadastrarAutor();
+                Autor novoAutor = new Autor();
+                System.out.println("Autor cadastrado com sucesso!\nDados do Autor:");
+                System.out.println(novoAutor.toString());
+                autores.add(novoAutor);
                 break;
 
             case 5:

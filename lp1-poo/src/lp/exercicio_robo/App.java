@@ -9,9 +9,6 @@ public class App {
         Robo robo = new Robo(0, 0);
 
         System.out.println(
-                "\nPosição inicial do robô:\n   Linha: " + robo.getPosicaoX() + "\n   Coluna: " + robo.getPosicaoY());
-        System.out.println("-------------------------------------------------");
-        System.out.println(
                 "Para mover o robô, siga as seguintes coordenadas:\na - mover para esquerda\nd - mover para direita \nw - mover para cima\ns - mover para baixo");
         System.out.println("-------------------------------------------------");
 
@@ -23,6 +20,8 @@ public class App {
 
             System.out.print("Digite quantas casas você deseja movimentar: ");
             robo.setQuantidadeCasas(in.nextInt());
+
+            robo.posicaoAnterior();
 
             robo.moverRobo(robo.getDirecao(), robo.getQuantidadeCasas());
 

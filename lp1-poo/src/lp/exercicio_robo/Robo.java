@@ -4,10 +4,12 @@ public class Robo {
     private char direcao;
     private int posicaoX;
     private int posicaoY;
+    private int posicaoAnteriorX;
+    private int posicaoAnteriorY;
     private int quantidadeCasas;
 
     // -------------- Método para mover as casas ---------------
-    public Robo moverRobo(char direcao, int quantidadeCasas) {
+    public void moverRobo(char direcao, int quantidadeCasas) {
         switch (direcao) {
             case 'w':
                 // Pra cima
@@ -30,7 +32,15 @@ public class Robo {
                 System.out.println("\nDireção inválida! Não foi possível movimentar o robô ");
                 break;
         }
-        return null;
+    }
+
+    // ------------------- Posição anterior --------------------
+    public void posicaoAnterior() {
+        posicaoAnteriorX = this.posicaoX;
+        posicaoAnteriorY = this.posicaoY;
+
+        System.out.println(
+                "\nPosição anterior do robô:\n   Linha: " + posicaoAnteriorX + "\n   Coluna: " + posicaoAnteriorY);
     }
 
     // ---------------------- Construtor -----------------------

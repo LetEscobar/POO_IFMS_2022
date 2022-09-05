@@ -16,7 +16,11 @@ public class Emprestimo {
         Scanner inString = new Scanner(System.in);
 
         System.out.println("Digite o nome do estudante que deseja realizar o empréstimo:");
-        this.estudante = estudante.setNome(nome);
+        // String nome = inString.nextLine();
+
+        for (int i = 0; i < estudantes.size(); i++) {
+            System.out.println(estudantes.get(i));
+        }
 
         // private Estudante estudante;
         // private Funcionario servidor;

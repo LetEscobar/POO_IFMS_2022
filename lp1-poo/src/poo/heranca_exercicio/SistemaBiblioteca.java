@@ -24,6 +24,7 @@ public class SistemaBiblioteca {
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
     private static List<Estudante> estudantes = new ArrayList<Estudante>();
     private static List<Autor> autores = new ArrayList<Autor>();
+    private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
 
@@ -38,10 +39,6 @@ public class SistemaBiblioteca {
 
     // ----------------------------------------------------------------
     private static void printMenu() {
-        // Limpando a tela:
-        // System.out.print("\033[H\033[2J");
-        // System.out.flush();
-        // Printando as opções do menu:
         for (String op : opcoes) {
             System.out.println(op);
         }
@@ -68,7 +65,7 @@ public class SistemaBiblioteca {
                 break;
 
             case 3:
-                System.out.println("---------- Cadastrar Estudante: ----------");
+                System.out.println("----------- Cadastrar Estudante: -----------");
                 Estudante novoEstudante = new Estudante();
                 System.out.println("\nEstudante cadastrado com sucesso!\nDados do Estudante:");
                 System.out.println(novoEstudante.toString());
@@ -76,7 +73,7 @@ public class SistemaBiblioteca {
                 break;
 
             case 4:
-                System.out.println("---------- Cadastrar Autor: ----------");
+                System.out.println("------------- Cadastrar Autor: -------------");
                 Autor novoAutor = new Autor();
                 System.out.println("Autor cadastrado com sucesso!\nDados do Autor:");
                 System.out.println(novoAutor.toString());
@@ -84,15 +81,23 @@ public class SistemaBiblioteca {
                 break;
 
             case 5:
-                System.out.println("---------- Realizar Empréstimo: ----------");
+                System.out.println("----------- Realizar Empréstimo: -----------");
+                Emprestimo novoEmprestimo = new Emprestimo();
+                System.out.println("Empréstimo realizado com sucesso!\nDados do empréstimo:");
+                System.out.println(novoEmprestimo.toString());
+                emprestimos.add(novoEmprestimo);
                 break;
 
             case 6:
-                System.out.println("---------- Receber Empréstimo: ----------");
+                System.out.println("------------ Receber Empréstimo: -----------");
+                break;
+
+            case 0:
+                System.out.println("----- Programa encerrado com sucesso! ------");
                 break;
 
             default:
-                System.out.println("---------- Programa encerrado! ----------");
+                System.out.println("----------- Programa encerrado! ------------");
                 break;
         }
     }

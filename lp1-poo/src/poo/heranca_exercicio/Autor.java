@@ -1,11 +1,13 @@
 package poo.heranca_exercicio;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Autor extends Pessoa {
     private String formacao;
     private int quantidadeLivros;
+
+    private static ArrayList<Autor> autores = new ArrayList<Autor>();
 
     // ---------------------------- Métodos ----------------------------
 
@@ -31,6 +33,10 @@ public class Autor extends Pessoa {
     }
 
     // ------------------ Métodos Getters and Setters ------------------
+    public static ArrayList<Autor> getAutor() {
+        return autores;
+    }
+
     public String getFormacao() {
         return this.formacao;
     }

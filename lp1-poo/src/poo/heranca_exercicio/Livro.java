@@ -2,12 +2,15 @@ package poo.heranca_exercicio;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Livro {
     private String titulo;
     private String editora;
     private LocalDate dataLancamento;
+
+    private static ArrayList<Livro> livros = new ArrayList<Livro>();
 
     // -------------------------- Métodos --------------------------
     public String toString() {
@@ -38,6 +41,10 @@ public class Livro {
     }
 
     // ---------------- Métodos Getters and Setters -----------------
+    public static ArrayList<Livro> getLivro() {
+        return livros;
+    }
+
     public String getTitulo() {
         return this.titulo;
     }

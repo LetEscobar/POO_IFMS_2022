@@ -1,7 +1,5 @@
 package poo.heranca_exercicio;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class SistemaBiblioteca {
@@ -19,12 +17,6 @@ public class SistemaBiblioteca {
             "----------------------------------------------------",
             "  Escolha uma das opções:                           "
     };
-
-    private static List<Livro> livros = new ArrayList<Livro>();
-    private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
-    private static List<Estudante> estudantes = new ArrayList<Estudante>();
-    private static List<Autor> autores = new ArrayList<Autor>();
-    private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
 
@@ -53,7 +45,7 @@ public class SistemaBiblioteca {
                 Livro novoLivro = new Livro();
                 System.out.print("\nLivro cadastrado com sucesso!\nDados do Livro:");
                 System.out.println(novoLivro.toString());
-                livros.add(novoLivro);
+                Livro.getLivro().add(novoLivro);
                 break;
 
             case 2:
@@ -61,7 +53,7 @@ public class SistemaBiblioteca {
                 Funcionario novoFuncionario = new Funcionario();
                 System.out.println("\nFuncionário cadastrado com sucesso!\nDados do Funcionário:");
                 System.out.println(novoFuncionario.toString());
-                funcionarios.add(novoFuncionario);
+                Funcionario.getFuncionario().add(novoFuncionario);
                 break;
 
             case 3:
@@ -69,7 +61,7 @@ public class SistemaBiblioteca {
                 Estudante novoEstudante = new Estudante();
                 System.out.println("\nEstudante cadastrado com sucesso!\nDados do Estudante:");
                 System.out.println(novoEstudante.toString());
-                estudantes.add(novoEstudante);
+                Estudante.getEstudantes().add(novoEstudante);
                 break;
 
             case 4:
@@ -77,7 +69,7 @@ public class SistemaBiblioteca {
                 Autor novoAutor = new Autor();
                 System.out.println("Autor cadastrado com sucesso!\nDados do Autor:");
                 System.out.println(novoAutor.toString());
-                autores.add(novoAutor);
+                Autor.getAutor().add(novoAutor);
                 break;
 
             case 5:
@@ -85,7 +77,7 @@ public class SistemaBiblioteca {
                 Emprestimo novoEmprestimo = new Emprestimo();
                 System.out.println("Empréstimo realizado com sucesso!\nDados do empréstimo:");
                 System.out.println(novoEmprestimo.toString());
-                emprestimos.add(novoEmprestimo);
+                Emprestimo.getEmprestimo().add(novoEmprestimo);
                 break;
 
             case 6:

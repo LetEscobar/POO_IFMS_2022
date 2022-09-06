@@ -2,12 +2,15 @@ package poo.heranca_exercicio;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Funcionario extends Pessoa {
     private int matricula;
     private LocalDate dataAdmissao;
     private String cargo;
+
+    private static ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
     // ---------------------------- Métodos ----------------------------
 
@@ -39,6 +42,10 @@ public class Funcionario extends Pessoa {
     }
 
     // ------------------ Métodos Getters and Setters ------------------
+    public static ArrayList<Funcionario> getFuncionario() {
+        return funcionarios;
+    }
+
     public int getMatricula() {
         return this.matricula;
     }

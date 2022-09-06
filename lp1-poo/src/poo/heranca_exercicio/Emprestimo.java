@@ -1,6 +1,7 @@
 package poo.heranca_exercicio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Emprestimo {
@@ -10,6 +11,8 @@ public class Emprestimo {
     private LocalDate dataEmprestimo;
     private LocalDate dataDevolucao;
 
+    public static ArrayList<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
+
     // ---------------------------- Métodos ----------------------------
     // Construtor:
     public Emprestimo() {
@@ -17,10 +20,6 @@ public class Emprestimo {
 
         System.out.println("Digite o nome do estudante que deseja realizar o empréstimo:");
         // String nome = inString.nextLine();
-
-        for (int i = 0; i < estudantes.size(); i++) {
-            System.out.println(estudantes.get(i));
-        }
 
         // private Estudante estudante;
         // private Funcionario servidor;
@@ -30,6 +29,10 @@ public class Emprestimo {
     }
 
     // ------------------ Métodos Getters and Setters ------------------
+    public static ArrayList<Emprestimo> getEmprestimo() {
+        return emprestimos;
+    }
+
     public Estudante getEstudante() {
         return this.estudante;
     }

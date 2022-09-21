@@ -3,11 +3,14 @@
 
 DEFINIÇÕES:
 
-- Classes: planta da casa
-
-- Atributos: aquilo que a planta da casa precisa ter para que ela exista
-
+- Classes: planta da casa (modelo)
+- Atributos: aquilo que a planta da casa precisa ter para que ela exista (características)
 - Objetos: Casa construída 
+
+- Classes abstratas
+    - a super classe geralmente vai ser uma classe abstrata
+    - não é possível instanciar objetos a partir de uma classe abstrata
+    - também é usada em interfaces
 
 - Construtor:
     - método responsável por inicializar o objeto
@@ -19,6 +22,11 @@ DEFINIÇÕES:
     - proteger os atributos de acessos idevidos e modificações diretas
     - encapsular = proteger ou privar
     - todos os atributos devem ser encapsulados
+    
+- Herança:
+    - classes filhas (sub classes) herdam atributos em comum de sua classe mãe (super classe)
+    - atributos da classe mãe devem ser protegidos (protected)
+    - atributos das classes filhas geralmente são privados
 
 
 ~ Modificadores de acesso: public, private, protected

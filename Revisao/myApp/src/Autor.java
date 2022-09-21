@@ -1,4 +1,4 @@
 public class Autor extends Pessoa {
-    int quantidadeLivros;
-    String areaDeEstudo;
+    private int quantidadeLivros;
+    private String areaDeEstudo;
 }

@@ -1,4 +1,4 @@
 public class Funcionario extends Pessoa {
-    String matricula;
-    boolean status;
+    private String matricula;
+    private boolean status;
 }

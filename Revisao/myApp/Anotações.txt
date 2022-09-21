@@ -1,0 +1,24 @@
+~ A orientação a objetos é baseada em classes e objetos.
+
+
+DEFINIÇÕES:
+
+- Classes: planta da casa
+
+- Atributos: aquilo que a planta da casa precisa ter para que ela exista
+
+- Objetos: Casa construída 
+
+- Construtor:
+    - método responsável por inicializar o objeto
+    - o construtor precisa ter o MESMO NOME DA CLASSE
+    - se não criar o construtor, o java cria um construtor default: public NomeClasse() {}
+    - uma classe pode ter mais de um construtor
+
+- Encapsulamento:
+    - proteger os atributos de acessos idevidos e modificações diretas
+    - encapsular = proteger ou privar
+    - todos os atributos devem ser encapsulados
+
+
+~ Modificadores de acesso: public, private, protected

@@ -17,6 +17,8 @@ DEFINIÇÕES:
     - o construtor precisa ter o MESMO NOME DA CLASSE
     - se não criar o construtor, o java cria um construtor default: public NomeClasse() {}
     - uma classe pode ter mais de um construtor
+    - o construtor permite chamar funções dentro dele
+    - obriga que o objeto seja criado com determinados parâmetros
 
 - Encapsulamento:
     - proteger os atributos de acessos idevidos e modificações diretas
@@ -28,5 +30,15 @@ DEFINIÇÕES:
     - atributos da classe mãe devem ser protegidos (protected)
     - atributos das classes filhas geralmente são privados
 
+- Getters and Setters
+    - São métodos públicos
+    - GET serve para busca informação (não possui parâmetros)
+    - SET insere informação (possui parâmetros)
+    - Geralmente é necessário criar get e set para todos os atributos da classe
+
+- toString:
+    - default: imprime o endereço de memória do objeto
+
+para associar objetos eu crio atributos de cada objeto dentro das classes
 
 ~ Modificadores de acesso: public, private, protected

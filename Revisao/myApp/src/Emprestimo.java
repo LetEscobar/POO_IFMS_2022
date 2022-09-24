@@ -1,20 +1,38 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Emprestimo {
-    // Atributos criados a partir de uma classe, vão virar atributos
+    // Atributos criados a partir de uma classe, vão virar objetos
     private Livro livro;
     private Funcionario funcionario;
     private Estudante estudante;
     private LocalDate dataEmprestimo;
     private LocalDate dataDevolucao;
 
-    public Emprestimo (Livro _livro, Funcionario _funcionario, Estudante _estudante){
+    // Construtor
+    public Emprestimo(Livro _livro, Funcionario _funcionario, Estudante _estudante) {
         this.livro = _livro;
         this.funcionario = _funcionario;
         this.estudante = _estudante;
         this.dataEmprestimo = LocalDate.now();
+        this.dataDevolucao = LocalDate.now();
     }
 
+    // toString - para exibir os dados na tela
+    public String toString() {
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        return "\nData de retirada: " + this.dataEmprestimo.format(formatDate) +
+                "\nData de devolução: " + this.dataDevolucao.format(formatDate) +
+                "\n---------------------------------------------" +
+                "\nDados do livro: \n" + this.livro +
+                "\n---------------------------------------------" +
+                "\nDados do estudante:\n" + this.estudante +
+                "\n---------------------------------------------" +
+                "\nDados do funcionário responsável:\n" + this.funcionario;
+    }
+
+    // Getters and setters
     public Livro getLivro() {
         return this.livro;
     }

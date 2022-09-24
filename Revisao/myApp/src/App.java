@@ -6,27 +6,33 @@ public class App {
         // Instanciando um objeto da classe Estudante:
         // nomeClasse nome-objeto = new construtor();
         // new: operador interno responsável por alocar a memória
-        Estudante objeto1 = new Estudante("12345678", "Letícia");
-        objeto1.setCurso("Análise e Desenvolvimento de Sistemas");
-        objeto1.setDataNascimento(LocalDate.of(2001, 01, 22));
+        Estudante objetoEstudante = new Estudante("12345678", "Letícia");
+        objetoEstudante.setCurso("Análise e Desenvolvimento de Sistemas");
+        objetoEstudante.setDataNascimento(LocalDate.of(2001, 01, 22));
 
-        Funcionario funcionario1 = new Funcionario("123", "Beto");
-        funcionario1.setDataNascimento(LocalDate.of(1999,12,23));
-        
-        Autor objetoUmAutor = new Autor("Ana Luiza", (LocalDate.of(2022, 2, 22)));
-        objetoUmAutor.setQuantidadeDeLivros(5);
-        objetoUmAutor.setAreaDeEstudo("Biologicas");
+        Funcionario objetoFuncionario = new Funcionario("123654", "João");
+        objetoFuncionario.setDataNascimento(LocalDate.of(1999, 12, 23));
 
-        Livro objetoUmLivro = new Livro();
-        objetoUmLivro.setTitulo("Programando em JAVA");
-        objetoUmLivro.setAnoLancamento(2020);
-        objetoUmLivro.setEditora("Editora XVV");
-        objetoUmLivro.setNumeroPaginas(234);
-        objetoUmLivro.setAutor(objetoUmAutor);
+        Autor objetoAutor = new Autor("Sergio Furgeri", (LocalDate.of(2018, 6, 18)));
+        objetoAutor.setQuantidadeDeLivros(5);
+        objetoAutor.setAreaDeEstudo("Computação");
 
-        System.out.println("DADOS DO ESTUDANTE:\n" + objeto1);
-        System.out.println("\nDADOS DO FUNCIONÁRIO:\n" + funcionario1);
-        System.out.println("\nDADOS DO AUTOR:\n" + objetoUmAutor);
-        System.out.println("\nDADOS DO LIVRO:\n" + objetoUmLivro);
+        Livro objetoLivro = new Livro("Programação Orientada a Objetos", objetoAutor);
+        objetoLivro.setAnoLancamento(2018);
+        objetoLivro.setEditora("Érica; 1ª edição");
+        objetoLivro.setNumeroPaginas(264);
+
+        Emprestimo objetoEmprestimo = new Emprestimo(objetoLivro, objetoFuncionario, objetoEstudante);
+        objetoEmprestimo.setDataEmprestimo(LocalDate.of(2022, 05, 15));
+        objetoEmprestimo.setDataEmprestimo(LocalDate.of(2022, 05, 30));
+        System.out.println("\n---------------------------------------------");
+        System.out.println("\t\tNOTA DE EMPRÉSTIMO DO LIVRO:");
+        System.out.println("---------------------------------------------");
+        System.out.println(objetoEmprestimo);
+        System.out.println("\n---------------------------------------------");
+        System.out.println("\t\tDADOS DO AUTOR DO LIVRO:");
+        System.out.println("---------------------------------------------");
+        System.out.println(objetoAutor);
+        System.out.println("---------------------------------------------");
     }
 }

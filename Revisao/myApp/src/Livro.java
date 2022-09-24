@@ -1,10 +1,26 @@
-public class Livro{
+public class Livro {
     private String titulo;
     private int anoLancamento;
     private String editora;
     private int numeroPaginas;
-    private Autor autor;
+    private Pessoa pessoa;
 
+    // Construtor
+    public Livro(String titulo, Pessoa nomeAutor) {
+        this.titulo = titulo;
+        this.pessoa = nomeAutor;
+    }
+
+    // toString - para exibir os dados na tela
+    public String toString() {
+        return "Título: " + this.titulo +
+                "\nAutor: " + this.pessoa.getNome() +
+                "\nAno de lançamento: " + this.anoLancamento +
+                "\nEditora: " + this.editora +
+                "\nNúmero de páginas: " + this.numeroPaginas;
+    }
+
+    // Getters and setters
     public String getTitulo() {
         return this.titulo;
     }
@@ -37,11 +53,11 @@ public class Livro{
         this.numeroPaginas = numeroPaginas;
     }
 
-    public Autor getAutor() {
-        return this.autor;
+    public Pessoa getPessoa() {
+        return this.pessoa;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }

@@ -8,6 +8,7 @@ public class Emprestimo {
     private Estudante estudante;
     private LocalDate dataEmprestimo;
     private LocalDate dataDevolucao;
+    private final int DIAS_EMPRESTIMO = 5;
 
     // Construtor
     public Emprestimo(Livro _livro, Funcionario _funcionario, Estudante _estudante) {
@@ -15,7 +16,7 @@ public class Emprestimo {
         this.funcionario = _funcionario;
         this.estudante = _estudante;
         this.dataEmprestimo = LocalDate.now();
-        this.dataDevolucao = LocalDate.now();
+        this.dataDevolucao = this.dataEmprestimo.plusDays(DIAS_EMPRESTIMO);
     }
 
     // toString - para exibir os dados na tela
@@ -30,6 +31,10 @@ public class Emprestimo {
                 "\nDados do estudante:\n" + this.estudante +
                 "\n---------------------------------------------" +
                 "\nDados do funcionário responsável:\n" + this.funcionario;
+    }
+
+    public void devolverLivro() {
+        this.dataDevolucao = LocalDate.now();
     }
 
     // Getters and setters

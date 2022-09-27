@@ -1,4 +1,5 @@
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Funcionario extends Pessoa {
     private String matricula;
@@ -37,5 +38,21 @@ public class Funcionario extends Pessoa {
 
     public void setStatus(boolean _status) {
         this.status = _status;
+    }
+
+    public static Funcionario lerFuncionario() {
+
+        // Lendo os dados do usuário
+        Scanner in = new Scanner(System.in);
+        System.out.print("Digite o nome: ");
+        String nome = in.nextLine();
+
+        System.out.print("Digite a matrícula do funcionário: ");
+        String matricula = in.nextLine();
+
+        // Criando um funcionário a partir dos dados informados:
+        Funcionario objetoFuncionario = new Funcionario(matricula, nome);
+
+        return objetoFuncionario;
     }
 }

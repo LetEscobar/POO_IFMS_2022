@@ -42,3 +42,5 @@ DEFINIÇÕES:
 para associar objetos eu crio atributos de cada objeto dentro das classes
 
 ~ Modificadores de acesso: public, private, protected
+
+- static: permite compartilhar informações sem a necessidade de instanciar novos objetos

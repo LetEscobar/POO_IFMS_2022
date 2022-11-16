@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Funcionario extends Pessoa {
         this.matricula = _matricula;
         this.nome = _nome;
         this.status = true;
+        this.dataNascimento = LocalDate.of(1999, 12, 23);
     }
 
     // toString - para exibir os dados na tela
